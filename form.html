@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Registration Form</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-title">Registration</div>
+    <div class="form-content">
+      <form action="#">
+        <div class="form-fields">
+          <div class="input-field">
+            <span class="label">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-field">
+            <span class="label">Username</span>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+          <div class="input-field">
+            <span class="label">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-field">
+            <span class="label">Phone Number</span>
+            <input type="number" placeholder="Enter your number" required>
+          </div>
+        </div>
+        <div class="gender-section">
+          <input type="radio" name="gender" id="male">
+          <input type="radio" name="gender" id="female">
+          <span class="gender-title">Gender</span><br><br>
+          <div class="gender-options">
+            <label for="male">
+              <span class="radio-dot male"></span>
+              <span class="gender-label">Male</span>
+            </label>
+            <label for="female">
+              <span class="radio-dot female"></span>
+              <span class="gender-label">Female</span>
+            </label>
+          </div>
+        </div>
+        <div class="submit-button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

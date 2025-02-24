@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #254052, #2b193b);
+}
+
+.form-container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.form-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.form-content .form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.form-fields .input-field {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.input-field .label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.input-field input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.input-field input:focus,
+.input-field input:valid {
+  border-color: #3d154d;
+}
+
+.gender-section .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.gender-options {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-inline: 10px;
+}
+
+.gender-options .radio-dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#male:checked~.gender-options label .male,
+#female:checked~.gender-options label .female {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+.submit-button {
+  width: 100%;
+  height: 45px;
+  margin: 35px 0;
+}
+
+.submit-button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.submit-button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+/* Responsive media query code for mobile devices */
+@media (max-width: 584px) {
+  .form-container {
+    max-width: 100%;
+  }
+
+  .form-fields .input-field {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .gender-options {
+    width: 100%;
+  }
+
+  .form-content .form-fields {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .form-fields::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-container .form-content .gender-options {
+    flex-direction: column;
+  }
+}

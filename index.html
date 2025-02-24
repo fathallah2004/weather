@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How's Today Weather ?...🌤</title>
+    <link rel="icon" type="image/x-icon" href="img/icons8-forecast-48.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body style="background-color: black;">
+
+    <header>
+      <nav>
+        <div class="nav-links" id="navLinks">
+          <div class="container">
+            <ul class="nav-list">
+              <li>
+                <a href="#" class="nav-link">
+                  <img src="img/icons8-home-40.png" alt width="45">
+                  <b>HOME</b>
+                </a>
+              </li>
+              <li>
+                <a href="#current-weather" class="nav-link">
+                  <img src="img/icons8-weather-50.png" alt width="45">
+                  <b>CURRENT</b>
+                </a>
+              </li>
+              <li>
+                <a href="#weather-forecast" class="nav-link">
+                  <img src="img/icons8-forecast-48.png" alt width="45">
+                  <b>FORECAST</b>
+                </a>
+              </li>
+              <li>
+                <a href="#weather-map" class="nav-link">
+                  <img src="img/icons8-map-50.png" alt width="45">
+                  <b>MAP</b>
+                </a>
+              </li>
+              <li>
+                <a href="#footer" class="nav-link">
+                  <img src="img/icons8-subscribe-64.png" alt width="45">
+                  <b>SUBSCRIBE</b>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 class="title">Is it sunny, rainy, or something in between today? 🌞</h1>
+      <br><br>
+      <div class="user-interface">
+        <input type="text" id="location-input" placeholder="Enter location">
+        <button id="search-button">Search</button>
+      </div>
+    </header>
+    <section id="current-weather">
+      <h1 class="section-header">🌨️ CURRENT WEATHER ☃️</h1>
+      <div class="weather-card">
+        <div class="weather-icon">
+          <img id="weatherIcon" alt="Weather Icon" src="img/icons8-cloud-lightning-64.png">
+        </div>
+        <div class="weather-info">
+          <h3 id="location">Panadura</h3>
+          <p class="temperature">25°C</p>
+          <p class="description">Cloudy</p>
+        </div>
+        <div class="weather-card3">
+          <div id="local-time"></div>
+        </div>
+      </div>
+      <div id="weather-tabel">
+        <table style="background-color: rgba(7, 72, 126, 0.829);">
+          <tr>
+            <td>
+              <img src="img/icons8-temperature-64.png" alt="Temperature Icon" width="60">
+              <br>
+              <strong>Temperature</strong>
+              <span>25°C</span>
+            </td>
+            <td>
+              <img src="img/icons8-humidity-80.png" alt="Humidity Icon" width="60">
+              <br>
+              <strong>Humidity</strong>
+              <span>33%</span>
+            </td>
+            <td>
+              <img src="img/icons8-wind-50.png" alt="Wind Icon" width="60">
+              <br>
+              <strong>Wind Speed</strong>
+              <span>75.22 km/h</span>
+            </td>
+            <td>
+              <img src="img/icons8-condition-64.png" alt="Condition Icon" width="60">
+              <br>
+              <strong>Condition</strong>
+              <span>Cloudy</span>
+            </td>
+            <td>
+              <img src="img/icons8-longitude-48.png" alt="Longitude Icon" width="60">
+              <br>
+              <strong>Longitude</strong>
+              <span>11.33</span>
+            </td>
+            <td>
+              <img src="img/icons8-latitude-48.png" alt="Latitude Icon" width="60">
+              <br>
+              <strong>Latitude</strong>
+              <span>20.55</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="weather-forecast">
+      <h1 class="section-header">🌦️ Weather Forecast 🥶</h1>
+      <hr>
+      <div class="weather-card2">
+        <div class="date-search">
+          <b>Select Date: </b><input id="selectedDate" type="date">
+          <button onclick="searchForecast()"><b>Search Date</b></button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table class="forecast-table" style="background-color: rgba(7, 72, 126, 0.829);">
+          
+          <tr>
+            <td><strong>2024-09-02</strong></td>
+            <td><strong>2024-09-03</strong></td>
+            <td><strong>2024-09-04</strong></td>
+            <td><strong>2024-09-05</strong></td>
+            <td><strong>2024-09-06</strong></td>
+            <td><strong>2024-09-07</strong></td>
+            <td><strong>2024-09-08</strong></td>
+          </tr>
+          <tr>
+            <td><img src="img/icons8-cloud-lightning-100.png" alt="Cloud Lightning Icon"></td>
+            <td><img src="img/icons8-cloud-64.png" alt="Cloud Icon"></td>
+            <td><img src="img/icons8-cloud-lightning-64.png" alt="Cloud Lightning Icon"></td>
+            <td><img src="img/icons8-weather-50.png" alt="Weather Icon"></td>
+            <td><img src="img/icons8-night-wind-50.png" alt="Night Wind Icon"></td>
+            <td><img src="img/icons8-storm-100.png" alt="Storm Icon"></td>
+            <td><img src="img/icons8-wind-50.png" alt="Wind Icon"></td>
+          </tr>
+         
+          <tr>
+            <td><strong>Cloud lightning</strong></td>
+            <td><strong>Thunder cloud rain</strong></td>
+            <td><strong>Black sun rays</strong></td>
+            <td><strong>Cloud lightning</strong></td>
+            <td><strong>Cloud snow</strong></td>
+            <td><strong>Sun with face</strong></td>
+            <td><strong>Night wind</strong></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="weather-map">
+      <h1 class="section-header">✈️ Map 🌐</h1>
+      <div id="map" class="map-container"></div>
+    </section>
+
+    <footer id="footer">
+      <h2>Stay Updated!</h2>
+      <p>
+        Join our community and receive weekly articles and updates tailored for you. <br> We promise no spam, only valuable content to keep you informed.
+      </p>
+      <form>
+        <input
+          id="email-address"
+          name="email"
+          type="email"
+          required
+          placeholder="Enter your email"
+        />
+    
+          <a href="form.html" class="button">Subscribe</a>
+        
+      </form>
+    </footer>
+
+  </body>
+</html>
